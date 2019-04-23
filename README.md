@@ -10,7 +10,7 @@ NFS v4 server on top of Alpine container image.
 - Create a directory that you want to share
 - Add the path to the directory in the docker-compose.yml file
   ``` bash
-  volume:
+  volumes:
       - <directory you want to share>:/nfsshare
   ```
 - docker-compose up

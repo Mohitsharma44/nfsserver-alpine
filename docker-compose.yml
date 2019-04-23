@@ -1,14 +1,14 @@
-version: 3
+version: "3"
 
 services:
   nfs:
-    name: nfs
+    container_name: nfs
     build:
       context: './'
     image: mohitsharma44/nfsserver-alpine:latest
     ports:
       - "2049:2049"
-    volume:
+    volumes:
       - /nfsshare:/nfsshare
     environment:
       - SHARED_DIRECTORY=/nfsshare
