@@ -5,7 +5,7 @@ NFS v4 server on top of Alpine container image.
 
 ### To run:
 
-** docker-compose **:
+**docker-compose**:
 
 - Create a directory that you want to share
 - Add the path to the directory in the docker-compose.yml file
@@ -15,7 +15,7 @@ NFS v4 server on top of Alpine container image.
   ```
 - docker-compose up
 
-** docker run **:
+**docker run**:
 `docker run -d --name nfs --privileged -v <directory you want to share>:/nfsshare -e SHARED_DIRECTORY=/nfsshare -p 2049:2049 --restart always mohitsharma44/nfsserver-alpine:latest`
 
 
